@@ -116,6 +116,7 @@ CreditsButton:AddButton({
     end
 })
 
+-- Only load the external script once when the main script is executed
 loadstring(game:HttpGet("https://raw.githubusercontent.com/JshHubScripting/JshHubOrion/refs/heads/main/AllScriptsMadeByJshHub"))()
 
 game.StarterGui:SetCore("SendNotification", {
