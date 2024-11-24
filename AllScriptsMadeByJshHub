@@ -99,7 +99,6 @@ CreditsButton:AddButton({
         creditsText.Font = Enum.Font.SourceSansBold
         creditsText.Parent = creditsFrame
 
-        -- Close Button (X)
         local closeButton = Instance.new("TextButton")
         closeButton.Size = UDim2.new(0, 30, 0, 30)
         closeButton.Position = UDim2.new(1, -40, 0, -40)
@@ -111,12 +110,11 @@ CreditsButton:AddButton({
         closeButton.Parent = creditsFrame
 
         closeButton.MouseButton1Click:Connect(function()
-            creditsWindow:Destroy()  -- Close the credits window when clicked
+            creditsWindow:Destroy()
         end)
     end
 })
 
--- Only load the external script once when the main script is executed
 loadstring(game:HttpGet("https://raw.githubusercontent.com/JshHubScripting/JshHubOrion/refs/heads/main/AllScriptsMadeByJshHub"))()
 
 game.StarterGui:SetCore("SendNotification", {
