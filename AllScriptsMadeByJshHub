@@ -98,8 +98,25 @@ CreditsButton:AddButton({
         creditsText.BackgroundTransparency = 1
         creditsText.Font = Enum.Font.SourceSansBold
         creditsText.Parent = creditsFrame
+
+        -- Close Button (X)
+        local closeButton = Instance.new("TextButton")
+        closeButton.Size = UDim2.new(0, 30, 0, 30)
+        closeButton.Position = UDim2.new(1, -40, 0, -40)
+        closeButton.Text = "X"
+        closeButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+        closeButton.TextScaled = true
+        closeButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+        closeButton.Font = Enum.Font.SourceSansBold
+        closeButton.Parent = creditsFrame
+
+        closeButton.MouseButton1Click:Connect(function()
+            creditsWindow:Destroy()  -- Close the credits window when clicked
+        end)
     end
 })
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/JshHubScripting/JshHubOrion/refs/heads/main/AllScriptsMadeByJshHub"))()
 
 game.StarterGui:SetCore("SendNotification", {
     Title = "Jsh Hub",
