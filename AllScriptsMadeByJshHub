@@ -98,24 +98,18 @@ CreditsButton:AddButton({
         creditsText.BackgroundTransparency = 1
         creditsText.Font = Enum.Font.SourceSansBold
         creditsText.Parent = creditsFrame
-
-        local closeButton = Instance.new("TextButton")
-        closeButton.Size = UDim2.new(0, 30, 0, 30)
-        closeButton.Position = UDim2.new(1, -40, 0, -40)
-        closeButton.Text = "X"
-        closeButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-        closeButton.TextScaled = true
-        closeButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-        closeButton.Font = Enum.Font.SourceSansBold
-        closeButton.Parent = creditsFrame
-
-        closeButton.MouseButton1Click:Connect(function()
-            creditsWindow:Destroy()
-        end)
     end
 })
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/JshHubScripting/JshHubOrion/refs/heads/main/AllScriptsMadeByJshHub"))()
+local CreditsLabel = Instance.new("TextLabel")
+CreditsLabel.Size = UDim2.new(0, 400, 0, 30)
+CreditsLabel.Position = UDim2.new(0, 240, 0, 20)
+CreditsLabel.Text = "You have to reload delta as this can't be clicked out of."
+CreditsLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+CreditsLabel.TextScaled = true
+CreditsLabel.BackgroundTransparency = 1
+CreditsLabel.Font = Enum.Font.SourceSansBold
+CreditsLabel.Parent = Window
 
 game.StarterGui:SetCore("SendNotification", {
     Title = "Jsh Hub",
