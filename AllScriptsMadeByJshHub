@@ -1,18 +1,108 @@
---[[
- .____                  ________ ___.    _____                           __                
- |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
- |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
- |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
- |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
-         \/          \/         \/    \/                \/     \/     \/                   
-          \_Welcome to LuaObfuscator.com   (Alpha 0.10.8) ~  Much Love, Ferib 
+local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Orion/master/source"))()
 
-]]--
+local Window = OrionLib:MakeWindow({
+    Name = "Jsh Hub",
+    HidePremium = false,
+    IntroText = "Jsh Scripts Hub",
+})
 
-local v0=loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Orion/master/source"))();local v1=v0:MakeWindow({Name="Jsh Hub",HidePremium=false,IntroText="Jsh Scripts Hub"});getgenv().CamlockSize=18 + 2 ;getgenv().CamlockPrediction=0.1 -0 ;getgenv().CamlockHeight=1070 -(68 + 997) ;local v5=v1:MakeTab({Name="Jsh.cc Camlock",Icon="rbxassetid://4483345998",PremiumOnly=false});v5:AddButton({Name="Enable Jsh.cc Lock",Callback=function() local v9=1270 -(226 + 1044) ;while true do if (v9==0) then loadstring(game:HttpGet("https://raw.githubusercontent.com/JshHubScripting/Jsh.CC/refs/heads/main/Lock"))();game.StarterGui:SetCore("SendNotification",{Title="Jsh.cc Loaded",Text="Jsh.cc Lock Script is now active!",Duration=21 -16 });break;end end end});local v6=v1:MakeTab({Name="Jsh.xd Lock",Icon="rbxassetid://4483345998",PremiumOnly=false});v6:AddButton({Name="Enable Jsh.xd Lock",Callback=function() local v10=117 -(32 + 85) ;while true do if (v10==(0 + 0)) then loadstring(game:HttpGet("https://raw.githubusercontent.com/JshHubScripting/Jsh.xd/refs/heads/main/newoplock",true))();game.StarterGui:SetCore("SendNotification",{Title="Jsh.xd Loaded",Text="Jsh.xd Lock Script is now active!",Duration=2 + 3 });break;end end end});local v7=v1:MakeTab({Name="Jsh Anti Lock",Icon="rbxassetid://4483345998",PremiumOnly=false});v7:AddButton({Name="Enable Jsh Anti",Callback=function() local v11=957 -(892 + 65) ;while true do if (v11==(0 -0)) then loadstring(game:HttpGet("https://raw.githubusercontent.com/JshHubScripting/Jsh.xd-Anti/refs/heads/main/best%20anti%20lmao"))();game.StarterGui:SetCore("SendNotification",{Title="Jsh Anti Loaded",Text="Jsh Anti Lock Script is now active!",Duration=9 -4 });break;end end end});local v8=v1:MakeTab({Name="Credits",Icon="rbxassetid://4483345998",PremiumOnly=false});v8:AddButton({Name="View Credits",Callback=function() local v12=0 -0 ;local v13;local v14;local v15;local v16;while true do if (v12==(354 -(87 + 263))) then v15.Parent=v14;v16=Instance.new("TextLabel");v16.Size=UDim2.new(1,180 -(67 + 113) ,1 + 0 ,0);v12=12 -7 ;end if (v12==(3 + 0)) then v14.Parent=v13;v15=Instance.new("UICorner");v15.CornerRadius=UDim.new(0,12);v12=15 -11 ;end if (v12==0) then v13=Instance.new("ScreenGui");v13.Name="CreditsWindow";v13.Parent=game.CoreGui;v12=953 -(802 + 150) ;end if (v12==(16 -10)) then v16.TextWrap=true;v16.BackgroundTransparency=1 -0 ;v16.Font=Enum.Font.SourceSansBold;v12=6 + 1 ;end if (v12==2) then v14.BackgroundColor3=Color3.fromRGB(997 -(915 + 82) ,0 -0 ,0 + 0 );v14.BackgroundTransparency=0.3 -0 ;v14.BorderSizePixel=1187 -(1069 + 118) ;v12=6 -3 ;end if (v12==1) then v14=Instance.new("Frame");v14.Size=UDim2.new(0 -0 ,300,0 + 0 ,355 -155 );v14.Position=UDim2.new(0.5 + 0 , -150,791.5 -(368 + 423) , -(314 -214));v12=20 -(10 + 8) ;end if (v12==(26 -19)) then v16.Parent=v14;break;end if (v12==(447 -(416 + 26))) then v16.Text="Made By / Created By: .5ior on sc
+getgenv().CamlockSize = 20
+getgenv().CamlockPrediction = 0.1
+getgenv().CamlockHeight = 5
 
-Tested By n4bil_99 and marioo3434 on dc.
+local CamlockButton = Window:MakeTab({
+    Name = "Jsh.cc Camlock",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
 
-This script (Orion Hub) was helped put up together by xbamzdev on dc.
+CamlockButton:AddButton({
+    Name = "Enable Jsh.cc Lock",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/JshHubScripting/Jsh.CC/refs/heads/main/Lock"))()
+        game.StarterGui:SetCore("SendNotification", {
+            Title = "Jsh.cc Loaded",
+            Text = "Jsh.cc Lock Script is now active!",
+            Duration = 5
+        })
+    end
+})
 
-All scripts in here Made By .5ior on dc";v16.TextColor3=Color3.fromRGB(255,255,255);v16.TextScaled=true;v12=19 -13 ;end end end});game.StarterGui:SetCore("SendNotification",{Title="Jsh Hub",Text="Welcome to Jsh Hub! You can now use Jsh.cc, Jsh.xd, and Jsh Anti scripts.",Duration=3 + 2 });
+local JshxdButton = Window:MakeTab({
+    Name = "Jsh.xd Lock",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+JshxdButton:AddButton({
+    Name = "Enable Jsh.xd Lock",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/JshHubScripting/Jsh.xd/refs/heads/main/newoplock", true))()
+        game.StarterGui:SetCore("SendNotification", {
+            Title = "Jsh.xd Loaded",
+            Text = "Jsh.xd Lock Script is now active!",
+            Duration = 5
+        })
+    end
+})
+
+local JshAntiButton = Window:MakeTab({
+    Name = "Jsh Anti Lock",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+JshAntiButton:AddButton({
+    Name = "Enable Jsh Anti",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/JshHubScripting/Jsh.xd-Anti/refs/heads/main/best%20anti%20lmao"))()
+        game.StarterGui:SetCore("SendNotification", {
+            Title = "Jsh Anti Loaded",
+            Text = "Jsh Anti Lock Script is now active!",
+            Duration = 5
+        })
+    end
+})
+
+local CreditsButton = Window:MakeTab({
+    Name = "Credits",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+CreditsButton:AddButton({
+    Name = "View Credits",
+    Callback = function()
+        local creditsWindow = Instance.new("ScreenGui")
+        creditsWindow.Name = "CreditsWindow"
+        creditsWindow.Parent = game.CoreGui
+
+        local creditsFrame = Instance.new("Frame")
+        creditsFrame.Size = UDim2.new(0, 300, 0, 200)
+        creditsFrame.Position = UDim2.new(0.5, -150, 0.5, -100)
+        creditsFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+        creditsFrame.BackgroundTransparency = 0.3
+        creditsFrame.BorderSizePixel = 0
+        creditsFrame.Parent = creditsWindow
+
+        local UICorner = Instance.new("UICorner")
+        UICorner.CornerRadius = UDim.new(0, 12)
+        UICorner.Parent = creditsFrame
+
+        local creditsText = Instance.new("TextLabel")
+        creditsText.Size = UDim2.new(1, 0, 1, 0)
+        creditsText.Text = "Made By / Created By: .5ior on sc\n\nTested By n4bil_99 and marioo3434 on dc.\n\nThis script (Orion Hub) was helped put up together by xbamzdev on dc.\n\nAll scripts in here Made By .5ior on dc"
+        creditsText.TextColor3 = Color3.fromRGB(255, 255, 255)
+        creditsText.TextScaled = true
+        creditsText.TextWrap = true
+        creditsText.BackgroundTransparency = 1
+        creditsText.Font = Enum.Font.SourceSansBold
+        creditsText.Parent = creditsFrame
+    end
+})
+
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Jsh Hub",
+    Text = "Welcome to Jsh Hub! You can now use Jsh.cc, Jsh.xd, and Jsh Anti scripts.",
+    Duration = 5
+})
