@@ -1,118 +1,12 @@
-local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Orion/master/source"))()
+--[[
+ .____                  ________ ___.    _____                           __                
+ |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
+ |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
+ |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
+ |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
+         \/          \/         \/    \/                \/     \/     \/                   
+          \_Welcome to LuaObfuscator.com   (Alpha 0.10.8) ~  Much Love, Ferib 
 
-local Window = OrionLib:MakeWindow({
-    Name = "Jsh Hub",
-    HidePremium = false,
-    IntroText = "Jsh Scripts Hub",
-})
+]]--
 
-getgenv().CamlockSize = 20
-getgenv().CamlockPrediction = 0.1
-getgenv().CamlockHeight = 5
-
-local CamlockButton = Window:MakeTab({
-    Name = "Jsh.cc Camlock",
-    Icon = "rbxassetid://4483345998",
-    PremiumOnly = false
-})
-
-CamlockButton:AddButton({
-    Name = "Enable Jsh.cc Lock",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/JshHubScripting/Jsh.CC/refs/heads/main/Lock"))()
-        game.StarterGui:SetCore("SendNotification", {
-            Title = "Jsh.cc Loaded",
-            Text = "Jsh.cc Lock Script is now active!",
-            Duration = 5
-        })
-    end
-})
-
-local JshxdButton = Window:MakeTab({
-    Name = "Jsh.xd Lock",
-    Icon = "rbxassetid://4483345998",
-    PremiumOnly = false
-})
-
-JshxdButton:AddButton({
-    Name = "Enable Jsh.xd Lock",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/JshHubScripting/Jsh.xd/refs/heads/main/newoplock", true))()
-        game.StarterGui:SetCore("SendNotification", {
-            Title = "Jsh.xd Loaded",
-            Text = "Jsh.xd Lock Script is now active!",
-            Duration = 5
-        })
-    end
-})
-
-local JshAntiButton = Window:MakeTab({
-    Name = "Jsh Anti Lock",
-    Icon = "rbxassetid://4483345998",
-    PremiumOnly = false
-})
-
-JshAntiButton:AddButton({
-    Name = "Enable Jsh Anti",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/JshHubScripting/Jsh.xd-Anti/refs/heads/main/best%20anti%20lmao"))()
-        game.StarterGui:SetCore("SendNotification", {
-            Title = "Jsh Anti Loaded",
-            Text = "Jsh Anti Lock Script is now active!",
-            Duration = 5
-        })
-    end
-})
-
-local CreditsButton = Window:MakeTab({
-    Name = "Credits",
-    Icon = "rbxassetid://4483345998",
-    PremiumOnly = false
-})
-
-CreditsButton:AddButton({
-    Name = "View Credits",
-    Callback = function()
-        local creditsWindow = Instance.new("ScreenGui")
-        creditsWindow.Name = "CreditsWindow"
-        creditsWindow.Parent = game.CoreGui
-
-        local creditsFrame = Instance.new("Frame")
-        creditsFrame.Size = UDim2.new(0, 300, 0, 200)
-        creditsFrame.Position = UDim2.new(0.5, -150, 0.5, -100)
-        creditsFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-        creditsFrame.BackgroundTransparency = 0.3
-        creditsFrame.BorderSizePixel = 0
-        creditsFrame.Parent = creditsWindow
-
-        local UICorner = Instance.new("UICorner")
-        UICorner.CornerRadius = UDim.new(0, 12)
-        UICorner.Parent = creditsFrame
-
-        local creditsText = Instance.new("TextLabel")
-        creditsText.Size = UDim2.new(1, 0, 1, 0)
-        creditsText.Text = "Made By / Created By: .5ior on sc\n\nTested By n4bil_99 and marioo3434 on dc.\n\nThis script (Orion Hub) was helped put up together by xbamzdev on dc.\n\nAll scripts in here Made By .5ior on dc"
-        creditsText.TextColor3 = Color3.fromRGB(255, 255, 255)
-        creditsText.TextScaled = true
-        creditsText.TextWrap = true
-        creditsText.BackgroundTransparency = 1
-        creditsText.Font = Enum.Font.SourceSansBold
-        creditsText.Parent = creditsFrame
-    end
-})
-
-local CreditsLabel = Instance.new("TextLabel")
-CreditsLabel.Size = UDim2.new(0, 400, 0, 30)
-CreditsLabel.Position = UDim2.new(0, 240, 0, 20)
-CreditsLabel.Text = "You have to reload delta as this can't be clicked out of."
-CreditsLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-CreditsLabel.TextScaled = true
-CreditsLabel.BackgroundTransparency = 1
-CreditsLabel.Font = Enum.Font.SourceSansBold
-CreditsLabel.Parent = Window
-
-game.StarterGui:SetCore("SendNotification", {
-    Title = "Jsh Hub",
-    Text = "Welcome to Jsh Hub! You can now use Jsh.cc, Jsh.xd, and Jsh Anti scripts.",
-    Duration = 5
-})
+local v0=loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Orion/main/source"))();local v1=v0:MakeWindow({Name="JshHub Scripts",HidePremium=false,SaveConfig=true,ConfigFolder="JshHubConfigs"});local v2=v1:MakeTab({Name="Scripts",Icon="rbxassetid://4483345998",PremiumOnly=false});local v3=890.1 -(668 + 222) ;v2:AddToggle({Name="Enable Jsh.cc",Default=false,Callback=function(v4) if v4 then local v7=0 + 0 ;while true do if ((877 -(282 + 595))==v7) then getgenv().CamlockSize=1657 -(1523 + 114) ;getgenv().CamlockPrediction=v3;v7=1;end if (v7==1) then getgenv().CamlockHeight=5 + 0 ;loadstring(game:HttpGet("https://raw.githubusercontent.com/JshHubScripting/Jsh.CC/refs/heads/main/Lock"))();break;end end else v0:MakeNotification({Name="Jsh.cc Disabled",Content="The Jsh.cc script is now turned off.",Image="rbxassetid://4483345998",Time=5});end end});v2:AddTextbox({Name="Set Predictions",Default=tostring(v3),TextDisappear=false,Callback=function(v5) local v6=0 -0 ;while true do if (v6==0) then v3=tonumber(v5);if v3 then v0:MakeNotification({Name="Prediction Updated",Content="Prediction set to "   .. v3 ,Image="rbxassetid://4483345998",Time=5});else v0:MakeNotification({Name="Invalid Input",Content="Please enter a valid number.",Image="rbxassetid://4483345998",Time=1070 -(68 + 997) });end break;end end end});v2:AddButton({Name="Jsh.xd",Callback=function() loadstring(game:HttpGet("https://raw.githubusercontent.com/JshHubScripting/Jsh.xd/refs/heads/main/newoplock",true))();end});v2:AddButton({Name="Jsh Anti",Callback=function() loadstring(game:HttpGet("https://raw.githubusercontent.com/JshHubScripting/Jsh.xd-Anti/refs/heads/main/best%20anti%20lmao"))();end});v0:Init();
